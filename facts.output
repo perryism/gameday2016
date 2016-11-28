@@ -1,0 +1,155 @@
+No config file found; using defaults
+
+PLAYBOOK: facts.yml ************************************************************
+1 plays in facts.yml
+
+PLAY [gather facts about current infrastructure] *******************************
+
+TASK [get more ec2 instance facts] *********************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:9
+ok: [localhost] => {"changed": false, "instances": [{"ami_launch_index": "0", "architecture": "x86_64", "block_device_mapping": [{"attach_time": "2016-11-28T16:30:28.000Z", "delete_on_termination": true, "device_name": "/dev/xvda", "status": "attached", "volume_id": "vol-003b8d2550358cb3d"}], "client_token": "base-EC2In-1DNZXGHVWPBWO", "ebs_optimized": false, "groups": [{"id": "sg-deeacdb6", "name": "base-infrastructure-InstanceSecurityGroup-4HUPP2RBIQK5"}], "hypervisor": "xen", "id": "i-0e8fb0c63ba41ba05", "image_id": "ami-0044b96f", "instance_profile": null, "interfaces": [{"id": "eni-21c89e4c", "mac_address": "02:c0:f9:42:1e:a1"}], "kernel": null, "key_name": null, "launch_time": "2016-11-28T16:30:27.000Z", "monitoring_state": "disabled", "persistent": false, "placement": {"tenancy": "default", "zone": "eu-central-1a"}, "private_dns_name": "ip-10-0-0-134.eu-central-1.compute.internal", "private_ip_address": "10.0.0.134", "public_dns_name": "", "public_ip_address": "35.156.157.189", "ramdisk": null, "region": "eu-central-1", "requester_id": null, "root_device_type": "ebs", "source_destination_check": "true", "spot_instance_request_id": null, "state": "running", "tags": {"aws:cloudformation:logical-id": "EC2Instance", "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", "aws:cloudformation:stack-name": "base-infrastructure"}, "virtualization_type": "hvm", "vpc_id": "vpc-9d7abff5"}]}
+
+TASK [debug] *******************************************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:14
+ok: [localhost] => {
+    "msg": {
+        "changed": false, 
+        "instances": [
+            {
+                "ami_launch_index": "0", 
+                "architecture": "x86_64", 
+                "block_device_mapping": [
+                    {
+                        "attach_time": "2016-11-28T16:30:28.000Z", 
+                        "delete_on_termination": true, 
+                        "device_name": "/dev/xvda", 
+                        "status": "attached", 
+                        "volume_id": "vol-003b8d2550358cb3d"
+                    }
+                ], 
+                "client_token": "base-EC2In-1DNZXGHVWPBWO", 
+                "ebs_optimized": false, 
+                "groups": [
+                    {
+                        "id": "sg-deeacdb6", 
+                        "name": "base-infrastructure-InstanceSecurityGroup-4HUPP2RBIQK5"
+                    }
+                ], 
+                "hypervisor": "xen", 
+                "id": "i-0e8fb0c63ba41ba05", 
+                "image_id": "ami-0044b96f", 
+                "instance_profile": null, 
+                "interfaces": [
+                    {
+                        "id": "eni-21c89e4c", 
+                        "mac_address": "02:c0:f9:42:1e:a1"
+                    }
+                ], 
+                "kernel": null, 
+                "key_name": null, 
+                "launch_time": "2016-11-28T16:30:27.000Z", 
+                "monitoring_state": "disabled", 
+                "persistent": false, 
+                "placement": {
+                    "tenancy": "default", 
+                    "zone": "eu-central-1a"
+                }, 
+                "private_dns_name": "ip-10-0-0-134.eu-central-1.compute.internal", 
+                "private_ip_address": "10.0.0.134", 
+                "public_dns_name": "", 
+                "public_ip_address": "35.156.157.189", 
+                "ramdisk": null, 
+                "region": "eu-central-1", 
+                "requester_id": null, 
+                "root_device_type": "ebs", 
+                "source_destination_check": "true", 
+                "spot_instance_request_id": null, 
+                "state": "running", 
+                "tags": {
+                    "aws:cloudformation:logical-id": "EC2Instance", 
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", 
+                    "aws:cloudformation:stack-name": "base-infrastructure"
+                }, 
+                "virtualization_type": "hvm", 
+                "vpc_id": "vpc-9d7abff5"
+            }
+        ]
+    }
+}
+
+TASK [gather facts about vpc] **************************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:18
+ok: [localhost] => {"changed": false, "vpcs": [{"cidr_block": "10.0.0.0/16", "classic_link_enabled": null, "dhcp_options_id": "dopt-6b9ac602", "id": "vpc-9d7abff5", "instance_tenancy": "default", "is_default": false, "state": "available", "tags": {"Name": "Production VPC", "aws:cloudformation:logical-id": "VPC", "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", "aws:cloudformation:stack-name": "base-infrastructure"}}]}
+
+TASK [debug] *******************************************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:25
+ok: [localhost] => {
+    "msg": {
+        "changed": false, 
+        "vpcs": [
+            {
+                "cidr_block": "10.0.0.0/16", 
+                "classic_link_enabled": null, 
+                "dhcp_options_id": "dopt-6b9ac602", 
+                "id": "vpc-9d7abff5", 
+                "instance_tenancy": "default", 
+                "is_default": false, 
+                "state": "available", 
+                "tags": {
+                    "Name": "Production VPC", 
+                    "aws:cloudformation:logical-id": "VPC", 
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", 
+                    "aws:cloudformation:stack-name": "base-infrastructure"
+                }
+            }
+        ]
+    }
+}
+
+TASK [gather facts about vpc subnets] ******************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:29
+ok: [localhost] => {"changed": false, "subnets": [{"availability_zone": "eu-central-1a", "available_ip_address_count": 10, "cidr_block": "10.0.0.128/28", "default_for_az": "false", "id": "subnet-f83a8190", "map_public_ip_on_launch": "false", "state": "available", "tags": {"aws:cloudformation:logical-id": "PublicSubnet1", "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", "aws:cloudformation:stack-name": "base-infrastructure"}, "vpc_id": "vpc-9d7abff5"}, {"availability_zone": "eu-central-1b", "available_ip_address_count": 251, "cidr_block": "10.0.128.0/24", "default_for_az": "false", "id": "subnet-12e82668", "map_public_ip_on_launch": "false", "state": "available", "tags": {"aws:cloudformation:logical-id": "PublicSubnet2", "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", "aws:cloudformation:stack-name": "base-infrastructure"}, "vpc_id": "vpc-9d7abff5"}]}
+
+TASK [debug] *******************************************************************
+task path: /Users/plee/workspace/temp/reinvent2016/gameday/phase-0/facts.yml:36
+ok: [localhost] => {
+    "msg": {
+        "changed": false, 
+        "subnets": [
+            {
+                "availability_zone": "eu-central-1a", 
+                "available_ip_address_count": 10, 
+                "cidr_block": "10.0.0.128/28", 
+                "default_for_az": "false", 
+                "id": "subnet-f83a8190", 
+                "map_public_ip_on_launch": "false", 
+                "state": "available", 
+                "tags": {
+                    "aws:cloudformation:logical-id": "PublicSubnet1", 
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", 
+                    "aws:cloudformation:stack-name": "base-infrastructure"
+                }, 
+                "vpc_id": "vpc-9d7abff5"
+            }, 
+            {
+                "availability_zone": "eu-central-1b", 
+                "available_ip_address_count": 251, 
+                "cidr_block": "10.0.128.0/24", 
+                "default_for_az": "false", 
+                "id": "subnet-12e82668", 
+                "map_public_ip_on_launch": "false", 
+                "state": "available", 
+                "tags": {
+                    "aws:cloudformation:logical-id": "PublicSubnet2", 
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:eu-central-1:644866066780:stack/base-infrastructure/824919a0-b587-11e6-8a2b-50a68a770ce6", 
+                    "aws:cloudformation:stack-name": "base-infrastructure"
+                }, 
+                "vpc_id": "vpc-9d7abff5"
+            }
+        ]
+    }
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+
